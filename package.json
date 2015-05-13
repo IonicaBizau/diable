@@ -1,7 +1,7 @@
 {
   "name": "diable",
   "version": "1.0.0",
-  "description": "For daemonizing the things out.",
+  "description": "Daemonize the things out.",
   "main": "lib/index.js",
   "directories": {
     "example": "example",
