@@ -4,7 +4,7 @@
   "description": "Daemonize the things out.",
   "main": "lib/index.js",
   "bin": {
-      "diable": "./bin/diable"
+    "diable": "./bin/diable"
   },
   "directories": {
     "example": "example",
