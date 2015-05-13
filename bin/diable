@@ -26,7 +26,7 @@ var pathOption = new Clp.Option(["p", "path"], "The script path.", "path")
           , "diable -p path/to/script.js -a '--some args'"
         ]
       , docs_url: "https://github.com/IonicaBizau/node-diable"
-    }, [pathOption, execOption, argsOption])
+    }, [pathOption, commandOption, execOption, argsOption])
   ;
 
 // Run this command in backgroud
