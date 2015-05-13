@@ -1,17 +1,34 @@
+![](http://i.imgur.com/i0aopxe.png)
+
 # diable
-For daemonizing the things out.
+Daemonize the things out.
 
 ## Installation
 Run the following commands to download and install the application:
 
 ```sh
-$ git clone git@github.com:IonicaBizau/node-diable.git diable
-$ cd diable
-$ npm install
+$ npm install -g diable
+```
+
+## Example
+```js
+// Dependencies
+var Diable = require("diable");
+
+// Check if we are already a daemon
+if (Diable.isDaemon()) {
+    return setTimeout(function () {
+        console.log("I was alive for 10 seconds.");
+    }, 10000);
+}
+
+// Do the stuff
+console.log("Daemonizing this process. I will be killed, but I have a child which will live 10 seconds. Do `ps aux | grep node` to see it.");
+Diable();
 ```
 
 ## Documentation
-## `Diable(path, exec, options)`
+### `Diable(path, exec, options)`
 Daemonizes processes, the current process being the default target (unless
 a different path is provided).
 
@@ -44,36 +61,35 @@ Diable("", "some-command", {
 });
 ```
 
-### Params
+#### Params
 - **String** `path`: The path to the script to daemonize (default: the current process path).
 - **String** `exec`: The executable to run (default: `process.execPath`).
 - **Object** `options`: An object which will be passed to the `exec` function. It is extended with:  - `force` (Boolean): A flag to force daemonizing even the process is a daemon already (default: `false`).
  - `exit` (Boolean): A flag to control the process exit (default: `true`).
+ - `args` (String|Object): An arguments string or an object which will be passed to [OArgv](https://github.com/ionicabizau/node-oargv) and stringified.
 
-### Return
-- **Null|Undefined** null if the process was not daemonized, otherwise `undefined`. A daemon cannot be daemonized by itself unless `options.force` is true.
+#### Return
+- **Null|Proc** `null` if the process was not daemonized, the daemon process otherwise. A daemon cannot be daemonized by itself unless `options.force` is true.
 
-## `daemonize(command, options)`
+### `daemonize(command, options)`
 Low level for daemonizing the things. It's used internally.
 Also, it can be useful in specific cases.
 
-### Params
+#### Params
 - **String** `command`: The command to run and daemonize.
 - **Object** `options`: The object passed to the `exec` function.
 
-### Return
+#### Return
 - **Process** The daemon process.
 
-## `isDaemon()`
+### `isDaemon()`
 Checks if the current process is a daemon started by `diable`.
 
-### Return
+#### Return
 - **Boolean** `true` if the process is a daemon, `false` otherwise.
 
 
-
 ## How to contribute
-
 1. File an issue in the repository, using the bug tracker, describing the
    contribution you'd like to make. This will help us to get you started on the
    right foot.

@@ -9,5 +9,5 @@ if (Diable.isDaemon()) {
 }
 
 // Do the stuff
-console.log("Daemonizing this process.");
+console.log("Daemonizing this process. I will be killed, but I have a child which will live 10 seconds. Do `ps aux | grep node` to see it.");
 Diable();

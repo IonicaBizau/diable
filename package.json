@@ -1,8 +1,11 @@
 {
   "name": "diable",
   "version": "1.0.0",
-  "description": "For daemonizing the things out.",
+  "description": "Daemonize the things out.",
   "main": "lib/index.js",
+  "bin": {
+    "diable": "./bin/diable"
+  },
   "directories": {
     "example": "example",
     "test": "test"
@@ -24,5 +27,12 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-diable/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/node-diable"
+  "homepage": "https://github.com/IonicaBizau/node-diable",
+  "dependencies": {
+    "ul": "2.1.0",
+    "oargv": "1.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.4"
+  }
 }

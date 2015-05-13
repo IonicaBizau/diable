@@ -1,0 +1,48 @@
+#!/usr/bin/env node
+
+// Dependencies
+var Diable = require("../lib")
+  , Clp = require("clp")
+  , Logger = require("bug-killer")
+  , Package = require("../package")
+  ;
+
+// Logger config
+Logger.config.logLevel = 4;
+
+// Create options and add them
+var pathOption = new Clp.Option(["p", "path"], "The script path.", "path")
+  , execOption = new Clp.Option(["e", "exec"], "The executable app.", "app")
+  , argsOption = new Clp.Option(["a", "args"], "The arguments to pass.", "args")
+  , commandOption = new Clp.Option(["c", "command"], "The command to run in backgroudn.", "command")
+  , parser = new Clp({
+        name: "Diable"
+      , version: Package.version
+      , process: true
+      , exe: Package.name
+      , examples: [
+            "diable -p path/to/script.js"
+          , "diable -p path/to/script.js -e iojs"
+          , "diable -p path/to/script.js -a '--some args'"
+        ]
+      , docs_url: "https://github.com/IonicaBizau/node-diable"
+    }, [pathOption, execOption, argsOption])
+  ;
+
+// Run this command in backgroud
+if (commandOption.value) {
+    Logger.log("Running in backgroud: " + commandOption.value, "info");
+    return Diable("", commandOption.value, {
+        args: argsOption.value
+    });
+}
+
+// Daemonize a script
+if (pathOption.is_provided) {
+    Logger.log("Daemonizing " + pathOption.value, "info");
+    return Diable(pathOption.value, execOption.value, {
+        args: argsOption.value
+    });
+}
+
+Logger.log("Please provide the path to the script to daemonize or a command to run. Run `diable -h` for help.", "error");
