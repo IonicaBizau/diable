@@ -10,6 +10,8 @@ Run the following commands to download and install the application:
 $ npm install -g diable
 ```
 
+Run `diable -h` for help.
+
 ## Example
 ```js
 // Dependencies
