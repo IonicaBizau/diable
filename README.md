@@ -11,6 +11,21 @@ $ npm install -g diable
 ```
 
 ## Example
+```js
+// Dependencies
+var Diable = require("diable");
+
+// Check if we are already a daemon
+if (Diable.isDaemon()) {
+    return setTimeout(function () {
+        console.log("I was alive for 10 seconds.");
+    }, 10000);
+}
+
+// Do the stuff
+console.log("Daemonizing this process. I will be killed, but I have a child which will live 10 seconds. Do `ps aux | grep node` to see it.");
+Diable();
+```
 
 ## Documentation
 ### `Diable(path, exec, options)`
@@ -51,6 +66,7 @@ Diable("", "some-command", {
 - **String** `exec`: The executable to run (default: `process.execPath`).
 - **Object** `options`: An object which will be passed to the `exec` function. It is extended with:  - `force` (Boolean): A flag to force daemonizing even the process is a daemon already (default: `false`).
  - `exit` (Boolean): A flag to control the process exit (default: `true`).
+ - `args` (String|Object): An arguments string or an object which will be passed to [OArgv](https://github.com/ionicabizau/node-oargv) and stringified.
 
 #### Return
 - **Null|Proc** `null` if the process was not daemonized, the daemon process otherwise. A daemon cannot be daemonized by itself unless `options.force` is true.
@@ -71,6 +87,7 @@ Checks if the current process is a daemon started by `diable`.
 
 #### Return
 - **Boolean** `true` if the process is a daemon, `false` otherwise.
+
 
 ## How to contribute
 1. File an issue in the repository, using the bug tracker, describing the
