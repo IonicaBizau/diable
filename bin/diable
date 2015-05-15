@@ -12,9 +12,8 @@ Logger.config.logLevel = 4;
 
 // Create options and add them
 var pathOption = new Clp.Option(["p", "path"], "The script path.", "path")
-  , execOption = new Clp.Option(["e", "exec"], "The executable app.", "app")
+  , execOption = new Clp.Option(["e", "exec"], "The executable app.", "app", "node")
   , argsOption = new Clp.Option(["a", "args"], "The arguments to pass.", "args")
-  , commandOption = new Clp.Option(["c", "command"], "The command to run in backgroudn.", "command")
   , parser = new Clp({
         name: "Diable"
       , version: Package.version
@@ -26,16 +25,8 @@ var pathOption = new Clp.Option(["p", "path"], "The script path.", "path")
           , "diable -p path/to/script.js -a '--some args'"
         ]
       , docs_url: "https://github.com/IonicaBizau/node-diable"
-    }, [pathOption, commandOption, execOption, argsOption])
+    }, [pathOption, execOption, argsOption])
   ;
-
-// Run this command in backgroud
-if (commandOption.value) {
-    Logger.log("Running in backgroud: " + commandOption.value, "info");
-    return Diable("", commandOption.value, {
-        args: argsOption.value
-    });
-}
 
 // Daemonize a script
 if (pathOption.is_provided) {
