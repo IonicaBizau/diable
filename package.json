@@ -35,5 +35,8 @@
     "bug-killer": "^4.0.0",
     "clp": "^3.0.0",
     "ul": "^5.0.0"
+  },
+  "blah": {
+    "h_img": "http://i.imgur.com/i0aopxe.png"
   }
 }
