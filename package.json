@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:IonicaBizau/node-diable.git"
+    "url": "git@github.com:IonicaBizau/diable.git"
   },
   "keywords": [
     "daemon",
@@ -25,9 +25,9 @@
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IonicaBizau/node-diable/issues"
+    "url": "https://github.com/IonicaBizau/diable/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/node-diable",
+  "homepage": "https://github.com/IonicaBizau/diable",
   "devDependencies": {
     "mocha": "^2.2.4"
   },
