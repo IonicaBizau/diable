@@ -7,9 +7,6 @@ var Diable = require("../lib")
   , Package = require("../package")
   ;
 
-// Logger config
-Logger.config.logLevel = 4;
-
 // Create options and add them
 var pathOption = new Clp.Option(["p", "path"], "The script path.", "path")
   , execOption = new Clp.Option(["e", "exec"], "The executable app.", "app", "node")
@@ -30,7 +27,7 @@ var pathOption = new Clp.Option(["p", "path"], "The script path.", "path")
 
 // Daemonize a script
 if (pathOption.is_provided) {
-    Logger.log("Daemonizing " + pathOption.value, "info");
+    Logger.log("Daemonizing " + pathOption.value);
     return Diable(pathOption.value, execOption.value, {
         args: argsOption.value
     });
