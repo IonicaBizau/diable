@@ -18,19 +18,27 @@ var pathOption = new Clp.Option(["p", "path"], "The script path.", "path")
       , exe: Package.name
       , examples: [
             "diable -p path/to/script.js"
-          , "diable -p path/to/script.js -e iojs"
+          , "diable -p some-script.sh -e sh"
           , "diable -p path/to/script.js -a '--some args'"
         ]
-      , docs_url: "https://github.com/IonicaBizau/node-diable"
+      , docs_url: Package.homepage
     }, [pathOption, execOption, argsOption])
   ;
 
-// Daemonize a script
-if (pathOption.is_provided) {
-    Logger.log("Daemonizing " + pathOption.value);
-    return Diable(pathOption.value, execOption.value, {
-        args: argsOption.value
-    });
+// Parse the arguments
+if (argsOption.value) {
+    argsOption.value = argsOption.value.match(/"[^"]+"|'[^']+'|\S+/g);
 }
 
+// Daemonize a script
+if (pathOption.is_provided) {
+    var proc = Diable(pathOption.value, execOption.value, {
+        args: argsOption.value
+    });
+    Logger.log("Daemonizing " + pathOption.value);
+    Logger.log("Process id: " + proc.pid);
+    return;
+}
+
+// Output
 Logger.log("Please provide the path to the script to daemonize or a command to run. Run `diable -h` for help.", "error");
