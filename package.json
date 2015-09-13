@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:IonicaBizau/diable.git"
+    "url": "git@github.com/IonicaBizau/diable.git"
   },
   "keywords": [
     "daemon",
@@ -31,12 +31,13 @@
   "devDependencies": {
     "mocha": "^2.2.4"
   },
+  "blah": {
+    "h_img": "http://i.imgur.com/i0aopxe.png"
+  },
   "dependencies": {
     "bug-killer": "^4.0.0",
     "clp": "^3.0.0",
+    "typpy": "^2.1.0",
     "ul": "^5.0.0"
-  },
-  "blah": {
-    "h_img": "http://i.imgur.com/i0aopxe.png"
   }
 }
