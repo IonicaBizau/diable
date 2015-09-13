@@ -11,16 +11,9 @@ Usage:
 // Daemonizes the current process
 Diable();
 
-// Daemonizes the current process by adding the '--foo bar' cli arguments.
-Diable({
-  args: {
-     "foo": "bar"
-  }
-});
-
-// Daemonizes a provided path
+// Daemonizes the current process with additional options
 Diable("path/to/some/script.js", {
-  // some options
+   args: ["some", "additional", "arguments"]
 });
 
 // Daemonizes a provided path
@@ -30,7 +23,8 @@ Diable("path/to/some/script.js", {
 
 // Daemonizes a different process handling the stdio streams
 Diable("", "some-command", {
-   stdio: [stdin, stdout, stderr]
+    stdout: process.stdout
+  , exit: false
 });
 ```
 
@@ -38,12 +32,16 @@ Diable("", "some-command", {
 - **String** `path`: The path to the script to daemonize (default: the current process path).
 - **String** `exec`: The executable to run (default: `process.execPath`).
 - **Object** `options`: An object which will be passed to the `exec` function. It is extended with:
- - `force` (Boolean): A flag to force daemonizing even the process is a daemon already (default: `false`).
- - `exit` (Boolean): A flag to control the process exit (default: `true`).
+ - `exit` (Boolean): A flag to control the process exit. If `false`, the parent process will not be closed.
  - `args` (Array): An array with the additional cli arguments.
+ - `stdout` (Stream): The stdout stream (default: `"ignore"`).
+ - `stderr` (Stream): The stderr stream (default: `"ignore"`).
+ - `env` (Object): The environment object (default: `process.env`).
+ - `cwd` (String): The working directory path (default: `process.cwd`).
+ - `force` (Boolean): If `true`, the daemonized process will be able to be daemonized.
 
 #### Return
-- **Null|Proc** `null` if the process was not daemonized, the daemon process otherwise. A daemon cannot be daemonized by itself unless `options.force` is true.
+- **Number|Process** `null` if the process was not daemonized, the daemon process otherwise. A daemon cannot be daemonized by itself unless `options.force` is `true`.
 
 ### `isDaemon()`
 Checks if the current process is a daemon started by `diable`.
@@ -51,12 +49,13 @@ Checks if the current process is a daemon started by `diable`.
 #### Return
 - **Boolean** `true` if the process is a daemon, `false` otherwise.
 
-### `daemonize(app, args, options)`
+### `daemonize(exec, path, args, options)`
 Low level for daemonizing the things. It's used internally.
 Also, it can be useful in specific cases.
 
 #### Params
-- **String** `app`: The executable application.
+- **String** `exec`: The executable application (defaults to the `process.execPath`).
+- **String** `path`: An optional node.js file path for convenience. This will be prepended to the `args` array.
 - **Array** `args`: The spawn arguments (default: `[]`).
 - **Object** `options`: The object passed to the `spawn` function (default: `{}`).
 
