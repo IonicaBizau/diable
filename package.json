@@ -1,6 +1,6 @@
 {
   "name": "diable",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Daemonize the things out.",
   "main": "lib/index.js",
   "bin": {
@@ -13,10 +13,6 @@
   "scripts": {
     "test": "mocha test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com/IonicaBizau/diable.git"
-  },
   "keywords": [
     "daemon",
     "programs",
@@ -24,10 +20,6 @@
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "license": "KINDLY",
-  "bugs": {
-    "url": "https://github.com/IonicaBizau/diable/issues"
-  },
-  "homepage": "https://github.com/IonicaBizau/diable",
   "devDependencies": {
     "mocha": "^2.2.4"
   },
@@ -39,5 +31,13 @@
     "clp": "^3.0.0",
     "typpy": "^2.1.0",
     "ul": "^5.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonicaBizau/diable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/diable/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/diable"
 }
