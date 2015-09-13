@@ -25,7 +25,7 @@ You are encouraged to kindly support the software and its author by:
 
 ===============================================================================
 
-The code was heavily inspired from Charlie Robbins's node-daemon fork which is
-MIT-licensed: https://github.com/indexzero/daemon.node
+The code was heavily inspired from Charlie Robbins's daemon.node project which
+is MIT-licensed: https://github.com/indexzero/daemon.node
 
 So, big thanks! :)
