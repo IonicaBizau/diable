@@ -1,5 +1,5 @@
 The KINDLY License
-Copyright (c) 2015 Ionică Bizău <bizauionica@gmail.com>
+Copyright (c) 2015 Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)
 
 You have the permission to use this software, read its source code, modify and
 redistribute it under the following terms:
@@ -22,10 +22,3 @@ You are encouraged to kindly support the software and its author by:
  - reporting issues/bugs and asking for feature requests
  - donating money or any other things that can help the author
  - contribute on the software code by fixing bugs and adding features
-
-===============================================================================
-
-The code was heavily inspired from Charlie Robbins's daemon.node project which
-is MIT-licensed: https://github.com/indexzero/daemon.node
-
-So, big thanks! :)
