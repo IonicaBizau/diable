@@ -1,30 +1,34 @@
+
 [![diable](http://i.imgur.com/i0aopxe.png)](#)
 
 # `$ diable` [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/diable.svg)](https://travis-ci.org/IonicaBizau/diable/) [![Version](https://img.shields.io/npm/v/diable.svg)](https://www.npmjs.com/package/diable) [![Downloads](https://img.shields.io/npm/dt/diable.svg)](https://www.npmjs.com/package/diable) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > Daemonize the things out.
 
-## Installation
+## :cloud: Installation
 
 You can install the package globally and use it as command line tool:
+
 
 ```sh
 $ npm i -g diable
 ```
 
+
 Then, run `diable --help` and see what the CLI tool can do.
 
-```sh
+
+```
 $ diable --help
 Usage: diable [options]
 
 Options:
-  -p, --path <path>  The script path.                              
-  -e, --exec <app>   The executable app.                           
-  -a, --args <args>  The arguments to pass.                        
+  -p, --path <path>  The script path.
+  -e, --exec <app>   The executable app.
+  -a, --args <args>  The arguments to pass.
   -c, --cwd <path>   The CWD where the daemonized process will run.
-  -h, --help         Displays this help.                           
-  -v, --version      Displays version information.                 
+  -h, --help         Displays this help.
+  -v, --version      Displays version information.
 
 Examples:
   diable -p path/to/script.js
@@ -34,13 +38,16 @@ Examples:
 Documentation can be found at https://github.com/IonicaBizau/diable
 ```
 
-## Example
+## :clipboard: Example
+
 
 Here is an example how to use this package as library. To install it locally, as library, you can do that using `npm`:
 
 ```sh
 $ npm i --save diable
 ```
+
+
 
 ```js
 // Dependencies
@@ -61,23 +68,22 @@ Diable();
 console.log("I am a daemon.");
 ```
 
-## Documentation
+## :memo: Documentation
 
 For full API reference, see the [DOCUMENTATION.md][docs] file.
 
-## How to contribute
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
+## :dizzy: Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - [`gh-notifier`](https://bitbucket.org/IonicaBizau/gh-notifier#readme)
 
- - [`web-term`](https://github.com/IonicaBizau/web-term)
+ - [`gh-notifier`](https://bitbucket.org/IonicaBizau/gh-notifier#readme)—Receive desktop notifications from your GitHub dashboard.
+ - [`web-term`](https://github.com/IonicaBizau/web-term)—A full screen terminal in your browser.
+ - [`wrabbit`](https://github.com/jillix/wrabbit) (by jillix)—Wrap scripts by providing the wrapping function.
 
- - [`wrabbit`](https://github.com/jillix/wrabbit) by jillix
-
-## License
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 

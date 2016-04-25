@@ -1,6 +1,6 @@
 {
   "name": "diable",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Daemonize the things out.",
   "main": "lib/index.js",
   "bin": {
@@ -39,5 +39,16 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/diable/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/diable"
+  "homepage": "https://github.com/IonicaBizau/diable",
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ]
 }
