@@ -1,7 +1,9 @@
 
 [![diable](http://i.imgur.com/i0aopxe.png)](#)
 
-# `$ diable` [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/diable.svg)](https://travis-ci.org/IonicaBizau/diable/) [![Version](https://img.shields.io/npm/v/diable.svg)](https://www.npmjs.com/package/diable) [![Downloads](https://img.shields.io/npm/dt/diable.svg)](https://www.npmjs.com/package/diable) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
+# `$ diable`
+
+ [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![AMA](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Travis](https://img.shields.io/travis/IonicaBizau/diable.svg)](https://travis-ci.org/IonicaBizau/diable/) [![Version](https://img.shields.io/npm/v/diable.svg)](https://www.npmjs.com/package/diable) [![Downloads](https://img.shields.io/npm/dt/diable.svg)](https://www.npmjs.com/package/diable) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > Daemonize the things out.
 
