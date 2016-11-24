@@ -1,5 +1,4 @@
 ## Documentation
-
 You can see below the API reference of this module.
 
 ### `Diable(opts)`
@@ -26,7 +25,8 @@ Also, it can be useful in specific cases.
 - **String** `exec`: The executable application (defaults to the `process.execPath`).
 - **String** `path`: An optional node.js file path for convenience. This will be prepended to the `args` array.
 - **Array** `args`: The spawn arguments (default: `[]`).
-- **Object** `options`: The object passed to the `spawn` function (default: `{}`).
+- **Object** `options`: The object passed to the `spawn` function (default: `{}`) extended with:
+ - `command` (String): The command to use. By default, the Node.js path.
 
 #### Return
 - **Process** The daemon process.

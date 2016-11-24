@@ -38,8 +38,10 @@ if (Diable.isDaemon()) {
 
 // Daemonize a script
 if (pathOption.value || execOption.value) {
-    var proc = Diable.daemonize(execOption.value, pathOption.value, argsOption.value, {
+debugger
+    var proc = Diable.daemonize(pathOption.value, argsOption.value, {
         cwd: cwdOption.value
+      , command: execOption.value
     });
     Logger.log("Daemonizing " + pathOption.value);
     Logger.log("Process id: " + proc.pid);
