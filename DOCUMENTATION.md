@@ -6,6 +6,7 @@ You can see below the API reference of this module.
 Daemonizes processes the current process.
 
 #### Params
+
 - **Object** `opts`: An object which will be passed to the `exec` function. It is extended with:
  - `env` (Object): The environment object (default: `process.env`).
 
@@ -23,6 +24,7 @@ Low level for daemonizing the things. It's used internally.
 Also, it can be useful in specific cases.
 
 #### Params
+
 - **String** `exec`: The executable application (defaults to the `process.execPath`).
 - **String** `path`: An optional node.js file path for convenience. This will be prepended to the `args` array.
 - **Array** `args`: The spawn arguments (default: `[]`).
