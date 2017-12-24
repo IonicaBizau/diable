@@ -1,3 +1,5 @@
+"use strict";
+
 // Dependencies
 var Diable = require("../lib");
 
