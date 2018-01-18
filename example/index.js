@@ -1,7 +1,4 @@
-"use strict";
-
-// Dependencies
-var Diable = require("../lib");
+const Diable = require("../lib");
 
 // Check if we are already a daemon
 if (Diable.isDaemon()) {
