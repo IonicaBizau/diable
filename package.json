@@ -1,6 +1,6 @@
 {
   "name": "diable",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "description": "Daemonize the things out.",
   "main": "lib/index.js",
   "bin": {
