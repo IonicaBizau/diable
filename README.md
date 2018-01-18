@@ -62,8 +62,7 @@ yarn add diable
 
 
 ```js
-// Dependencies
-var Diable = require("diable");
+const Diable = require("diable");
 
 // Check if we are already a daemon
 if (Diable.isDaemon()) {
