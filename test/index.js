@@ -3,7 +3,7 @@ const Diable = require("../lib")
 
 // Check if it's a daemon
 if (Diable.isDaemon()) {
-    return setTimeout(() => {
+    setTimeout(() => {
         console.log("Was alive for 1000ms");
     }, 1000);
 } else {
