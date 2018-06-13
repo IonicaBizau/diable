@@ -126,6 +126,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`gh-notifier`](https://bitbucket.org/IonicaBizau/gh-notifier#readme)—Receive desktop notifications from your GitHub dashboard.
  - [`web-term`](https://github.com/IonicaBizau/web-term)—A full screen terminal in your browser.
  - [`wrabbit`](https://github.com/jillix/wrabbit) (by jillix)—Wrap scripts by providing the wrapping function.
+ - [`pnpm`](https://github.com/pnpm/pnpm)—Fast, disk space efficient package manager
 
 ## :scroll: License
 
